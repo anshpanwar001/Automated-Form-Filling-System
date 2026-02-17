@@ -1,0 +1,21 @@
+{
+  "name": "automated-form-filling-system",
+  "version": "1.0.0",
+  "description": "A web-based AI system that helps users fill complex government or exam forms. Users upload a form and required documents, the AI extracts details using OCR, auto-fills the form, and generates a complete, downloadable PDF, reducing reliance on cyber cafes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anshpanwar001/Automated-Form-Filling-System.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/anshpanwar001/Automated-Form-Filling-System/issues"
+  },
+  "homepage": "https://github.com/anshpanwar001/Automated-Form-Filling-System#readme"
+}

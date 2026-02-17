@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberCafe AI</title>
+</head>
+<body>
+  <header>
+    <h1>CyberCafe AI</h1>
+    <p>Fill forms faster by uploading documents and reviewing extracted details.</p>
+    <nav>
+      <ul>
+        <li><a href="auth.html">Authentication Page</a></li>
+        <li><a href="#form">Form Selection</a></li>
+        <li><a href="#docs">Documents</a></li>
+        <li><a href="#fill">Auto Fill</a></li>
+        <li><a href="#out">Final Output</a></li>
+        <li><a href="#dash">Dashboard</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    <section id="form">
+      <h2 id="form-h">1. Select or Upload Form</h2>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Choose Form Type</legend>
+
+          <label>
+            <input type="radio" name="form_mode" value="existing" checked>
+            Existing Government Form
+          </label>
+
+          <label>
+            <input type="radio" name="form_mode" value="custom">
+            Upload Custom PDF
+          </label>
+        </fieldset>
+
+        <label for="form-sel">Existing Form</label>
+        <select id="form-sel" name="existing_form">
+          <option value="">Select a form</option>
+          <option value="passport-renewal">Passport Renewal</option>
+          <option value="scholarship-application">Scholarship Application</option>
+          <option value="exam-registration">Exam Registration</option>
+          <option value="driving-license">Driving License</option>
+        </select>
+        <br>
+
+        <label for="pdf">Custom PDF Form</label>
+        <input id="pdf" name="custom_form" type="file" accept="application/pdf">
+        <br>
+
+        <button type="submit">Save Form Selection</button>
+      </form>
+    </section>
+
+    <section id="docs">
+      <h2 id="docs-h">2. Upload Required Documents</h2>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <label for="aadhaar">Aadhaar Card</label>
+        <input id="aadhaar" name="aadhaar" type="file" accept="image/*,application/pdf">
+        <br>
+
+        <label for="photo">Passport Photo</label>
+        <input id="photo" name="photo" type="file" accept="image/*">
+        <br>
+
+        <label for="sign">Signature</label>
+        <input id="sign" name="signature" type="file" accept="image/*">
+        <br>
+
+        <label for="extra">Additional Documents</label>
+        <input id="extra" name="extra_files" type="file" multiple>
+        <br>
+
+        <button type="submit">Upload Documents</button>
+      </form>
+    </section>
+
+    <section id="fill">
+      <h2 id="fill-h">3. Review and Edit Extracted Fields</h2>
+      <form action="#" method="post">
+        <label for="name">Full Name</label>
+        <input id="name" name="full_name" type="text" required>
+        <br>
+
+        <label for="dob">Date of Birth</label>
+        <input id="dob" name="dob" type="date" required>
+        <br>
+
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <br>
+
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" type="tel" required>
+        <br>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+        <br>
+
+        <label for="addr">Address</label>
+        <textarea id="addr" name="address" rows="4" cols="40" required></textarea>
+        <br>
+
+        <button type="submit">Save Form Data</button>
+      </form>
+    </section>
+
+    <section id="out">
+      <h2 id="out-h">4. Final Form Generation</h2>
+      <form action="#" method="post">
+        <button type="submit">Generate Final Filled PDF</button>
+      </form>
+
+      <article>
+        <h3>Preview Area</h3>
+        <p>Final filled form preview appears here after backend processing.</p>
+      </article>
+
+      <p>
+        <a href="#">Download Final File</a>
+      </p>
+    </section>
+
+    <section id="dash">
+      <h2 id="dash-h">5. Submission History</h2>
+      <table>
+        <caption>Recent Submissions</caption>
+        <thead>
+          <tr>
+            <th scope="col">Timestamp</th>
+            <th scope="col">Form</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Example Date/Time</td>
+            <td>Example Form</td>
+            <td>Generated</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <p>&copy; CyberCafe AI</p>
+  </footer>
+</body>
+</html>
